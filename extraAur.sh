@@ -3,7 +3,7 @@
 pkgbuildFile=$(find -type f -name PKGBUILD)
 
 #Adiciona CMAKE_POLICY_VERSION_MINIMUM=3.5 após o build antes do cmake -B
-sed -i '/build ()/{p;s/.*/export CMAKE_POLICY_VERSION_MINIMUM=3.5/;}' $pkgbuildFile
+sed -i '/build()/{p;s/.*/    export CMAKE_POLICY_VERSION_MINIMUM=3.5/;}' $pkgbuildFile
 
 # # Add ao depends ao pkgbuild
 # sed -i "/\bdepends=/s/(/\('xpto\' 'xpto3\' 'xpto2\' /" $pkgbuildFile
